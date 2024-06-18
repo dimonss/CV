@@ -30,7 +30,7 @@ const Content = () => {
                 expertise to contribute to the success of innovative projects
                 and drive business growth.<br/><br/></MainText>
             <MainTitle>
-                Eduction
+                Education
             </MainTitle>
             <Grid display={"flex"} width={'100%'} container mb={4}>
                 <Grid item lg={2} sm={3} xs={12} mb={1} sx={{textAlign: "left"}}>2015-2018</Grid>
