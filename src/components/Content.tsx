@@ -5,7 +5,9 @@ import MainText from "./reusable/MainText";
 // @ts-ignore
 import KSTULogoImg from "../images/KGUSTA.png";
 // @ts-ignore
-import BeelineLogoImg from "../images/BeeLine_logo.png";
+import beelineLogoImg from "../images/BeeLine_logo.png";
+// @ts-ignore
+import mbankLogoImg from "../images/mbank_logo.png";
 import Box from '@mui/material/Box';
 
 const Content = () => {
@@ -45,21 +47,11 @@ const Content = () => {
                         and Computer Science.</Box>
                     <Box ml={2}>
                         <MainText>
-                            During my undergraduate studies in computer science, I acquired a comprehensive
-                            understanding of various programming languages, algorithms, and data structures. Throughout
-                            the program, I actively engaged in coursework focused on software development methodologies,
-                            object-oriented programming, and database management systems. I participated in hands-on
-                            projects and collaborative assignments, where I gained practical experience in designing and
-                            implementing software solutions to real-world problems.
-                            <br/>
-                            <br/>
-                            In addition to technical skills, my education emphasized critical thinking,
-                            problem-solving,
-                            and analytical reasoning, which are essential for success in the field of programming. I
-                            also had the opportunity to explore elective courses in specialized areas such as web
-                            development, mobile application development, and artificial intelligence, further
-                            broadening
-                            my knowledge and skillset.
+                            During my computer science studies, I gained a solid understanding of programming languages,
+                            algorithms, and data structures. I worked on projects applying software development
+                            methodologies, object-oriented programming, and database management. My education also
+                            emphasized critical thinking and problem-solving, and I explored electives in web
+                            development, mobile apps, and AI to broaden my skills.
                         </MainText>
                     </Box>
                 </Grid>
@@ -75,16 +67,11 @@ const Content = () => {
                     <Box textAlign={"left"} ml={2} mb={1} sx={{color: "#4f4f4f"}}> Master's degree in Computer Science
                         and Computer Science.</Box>
                     <Box ml={2}>
-                        <MainText>During my master's studies in computer science, I delved into advanced topics and
-                            specialized areas within the realm of programming. This included in-depth exploration of
-                            advanced algorithms, data structures, and software engineering methodologies. I actively
-                            participated in research projects and seminars, where I had the opportunity to contribute to
-                            the development of cutting-edge solutions and explore emerging technologies. Collaborating
-                            with peers and faculty members on various projects enriched my understanding of complex
-                            programming concepts and honed my analytical and problem-solving skills. My master's
-                            education provided me with a solid foundation in advanced programming principles and
-                            prepared me to tackle complex challenges in the dynamic field of computer
-                            science.</MainText>
+                        <MainText>During my master's in computer science, I explored advanced algorithms, data
+                            structures, and software engineering. I participated in research and seminars, contributing
+                            to innovative solutions and emerging technologies. Collaborating on projects enhanced my
+                            understanding of complex programming concepts and sharpened my problem-solving skills,
+                            preparing me for challenges in the field.</MainText>
                     </Box>
                 </Grid>
 
@@ -102,26 +89,18 @@ const Content = () => {
                              mr={1}/>
                         <Grid sx={{textAlign: "left", fontWeight: 'bold'}}>KSTU named after I.Razzakova</Grid>
                     </Grid>
-                    <Box textAlign={"left"} ml={2} mb={1} color={"#4f4f4f"}>Engineer | 2018-2020
-                        now</Box>
+                    <Box textAlign={"left"} ml={2} mb={1} color={"#4f4f4f"}>Engineer | Sep 2018 - Sep 2020</Box>
                     <Box ml={2}>
-                        <MainText>
-                            Two years, I have served as the manager of a computer laboratory, where I have been
-                            responsible for overseeing its daily operations and ensuring its efficient and effective
-                            functioning. My duties have included managing a team of technicians and support staff,
-                            delegating tasks, and providing guidance and support as needed. I have been instrumental in
-                            maintaining the lab's equipment and infrastructure, ensuring that all systems are up-to-date
-                            and running smoothly. Additionally, I have been responsible for managing the lab's budget,
-                            allocating resources appropriately, and ensuring that all expenditures are within budgetary
-                            constraints. Throughout my tenure, I have demonstrated strong leadership skills, effective
-                            communication, and a commitment to excellence in all aspects of my work
-                        </MainText>
+                        <MainText>For the past two years, I have managed a computer lab, overseeing daily operations and
+                            leading a team of technicians. My responsibilities included maintaining equipment, managing
+                            the lab's budget, and ensuring all systems function smoothly. I've demonstrated leadership,
+                            effective communication, and a commitment to excellence throughout my tenure.</MainText>
                     </Box>
                 </Grid>
             </Grid>
             <Grid display={"flex"} width={'100%'} mb={2} container>
                 <Grid item lg={2} sm={3} xs={12} mb={1} sx={{textAlign: "left"}}>
-                    <img src={BeelineLogoImg} alt="KSTU logo"/>
+                    <img src={beelineLogoImg} alt="Beeline logo"/>
                 </Grid>
                 <Grid item lg={10} sm={9} xs={12}>
                     <Grid display={"flex"} alignItems={'center'} mb={1}>
@@ -129,27 +108,37 @@ const Content = () => {
                              mr={1}/>
                         <Grid sx={{textAlign: "left", fontWeight: 'bold'}}>Beeline kg</Grid>
                     </Grid>
-                    <Box textAlign={"left"} ml={2} mb={1} sx={{color: "#4f4f4f"}}>Frontend developer | 2020-till
-                        now
+                    <Box textAlign={"left"} ml={2} mb={1} sx={{color: "#4f4f4f"}}>Frontend developer | Dec 2020 - May
+                        2024
                     </Box>
                     <Box ml={2}>
                         <MainText>
-                            Over the past three years, I have been actively engaged in web development, honing my
-                            skills
-                            and gaining valuable experience in the field. My responsibilities have included designing,
-                            developing, and maintaining various web applications and websites. I have collaborated
-                            closely with
-                            cross-functional teams, including designers and project managers, to ensure the successful
-                            delivery
-                            of projects. Additionally, I have been involved in the implementation of responsive and
-                            adaptive
-                            designs, ensuring optimal user experience across different devices and screen sizes.
-                            Throughout my
-                            journey as a web developer, I have remained committed to staying updated with the latest
-                            technologies and best practices in the industry, continuously seeking opportunities for
-                            growth and
-                            improvement in my craft
-                        </MainText>
+                            For the past three years, I have focused on web development, designing and maintaining web
+                            applications and collaborating with cross-functional teams. I have implemented responsive
+                            designs for optimal user experience across devices while staying updated with the latest
+                            technologies and best practices in the field.</MainText>
+                    </Box>
+                </Grid>
+            </Grid>
+            <Grid display={"flex"} width={'100%'} mb={2} container>
+                <Grid item lg={2} sm={3} xs={12} mb={1} sx={{textAlign: "left"}}>
+                    <img src={mbankLogoImg} width={'40px'} alt="Mbank logo"/>
+                </Grid>
+                <Grid item lg={10} sm={9} xs={12}>
+                    <Grid display={"flex"} alignItems={'center'} mb={1}>
+                        <Box sx={{backgroundColor: "#e5e5e5", borderRadius: "50%", width: '10px', height: "10px"}}
+                             mr={1}/>
+                        <Grid sx={{textAlign: "left", fontWeight: 'bold'}}>MBANK</Grid>
+                    </Grid>
+                    <Box textAlign={"left"} ml={2} mb={1} sx={{color: "#4f4f4f"}}>Lead Frontend developer | jun
+                        2024-till
+                        now
+                    </Box>
+                    <Box ml={2}>
+                        <MainText>Recently stepped into the Lead Frontend Developer role, managing a team of 5. My
+                            responsibilities include guiding the team, overseeing architecture using React and MobX,
+                            ensuring performance optimization, and delivering responsive designs. I collaborate closely
+                            with designers and backend teams to meet business goals.</MainText>
                     </Box>
                 </Grid>
 
@@ -157,30 +146,6 @@ const Content = () => {
             <MainTitle>
                 Refresher courses
             </MainTitle>
-            <Grid display={"flex"} width={'100%'} container mb={4}>
-                <Grid item lg={2} sm={3} xs={12} mb={1} sx={{textAlign: "left"}}>2019</Grid>
-                <Grid item lg={10} sm={9} xs={12}>
-
-                    <Grid display={"flex"} alignItems={'center'} mb={1}>
-                        <Box sx={{backgroundColor: "#e5e5e5", borderRadius: "50%", width: '10px', height: "10px"}}
-                             mr={1}/>
-                        <Grid sx={{textAlign: "left", fontWeight: 'bold'}}>Certificate</Grid>
-                    </Grid>
-                    <Box textAlign={"left"} ml={2} mb={1} sx={{color: "#4f4f4f"}}> Computer network</Box>
-                    <Box ml={2}>
-                        <MainText>
-                            In the computer networking courses, we studied the fundamentals of network technologies,
-                            including data transmission protocols, network architecture, configuration, and management
-                            of network equipment. We also learned about routing principles, data routing and switching,
-                            as well as network security. During the courses, we conducted practical sessions,
-                            configuring and troubleshooting network equipment, as well as solving tasks related to
-                            network diagnostics and fault correction
-
-                        </MainText>
-                    </Box>
-
-                </Grid>
-            </Grid>
             <Grid display={"flex"} width={'100%'} container mb={4}>
                 <Grid item lg={2} sm={3} xs={12} mb={1} sx={{textAlign: "left"}}>2018</Grid>
                 <Grid item lg={10} sm={9} xs={12}>
@@ -200,6 +165,30 @@ const Content = () => {
                             planning, tracking, and control processes, as well as risk and resource management.
                             Throughout the courses, we engaged in practical exercises including creating project plans,
                             estimating time and resources, and managing teams and communication with stakeholders.
+                        </MainText>
+                    </Box>
+
+                </Grid>
+            </Grid>
+            <Grid display={"flex"} width={'100%'} container mb={4}>
+                <Grid item lg={2} sm={3} xs={12} mb={1} sx={{textAlign: "left"}}>2019</Grid>
+                <Grid item lg={10} sm={9} xs={12}>
+
+                    <Grid display={"flex"} alignItems={'center'} mb={1}>
+                        <Box sx={{backgroundColor: "#e5e5e5", borderRadius: "50%", width: '10px', height: "10px"}}
+                             mr={1}/>
+                        <Grid sx={{textAlign: "left", fontWeight: 'bold'}}>Certificate</Grid>
+                    </Grid>
+                    <Box textAlign={"left"} ml={2} mb={1} sx={{color: "#4f4f4f"}}> Computer network</Box>
+                    <Box ml={2}>
+                        <MainText>
+                            In the computer networking courses, we studied the fundamentals of network technologies,
+                            including data transmission protocols, network architecture, configuration, and management
+                            of network equipment. We also learned about routing principles, data routing and switching,
+                            as well as network security. During the courses, we conducted practical sessions,
+                            configuring and troubleshooting network equipment, as well as solving tasks related to
+                            network diagnostics and fault correction
+
                         </MainText>
                     </Box>
 
