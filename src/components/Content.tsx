@@ -6,7 +6,7 @@ import TimelineItem from "./reusable/TimelineItem";
 import KSTULogoImg from "../images/KGUSTA.png";
 import beelineLogoImg from "../images/BeeLine_logo.png";
 import mbankLogoImg from "../images/mbank_logo.png";
-import { getText } from '../constants/locales';
+import { useText } from '../constants/locales';
 
 const styles = {
     container: {
@@ -21,61 +21,61 @@ const styles = {
 const Content: React.FC = () => {
     return (
         <Grid container sx={styles.container}>
-            <MainTitle>{getText('about.title')}</MainTitle>
+            <MainTitle>{useText('about.title')}</MainTitle>
             <MainText>
-                {getText('about.description')}<br/><br/>
+                {useText('about.description')}<br/><br/>
             </MainText>
 
-            <MainTitle>{getText('education.title')}</MainTitle>
+            <MainTitle>{useText('education.title')}</MainTitle>
             <TimelineItem
-                date={getText('education.bachelor.date')}
-                title={getText('education.bachelor.title')}
-                subtitle={getText('education.bachelor.subtitle')}
-                description={getText('education.bachelor.description')}
+                date={useText('education.bachelor.date')}
+                title={useText('education.bachelor.title')}
+                subtitle={useText('education.bachelor.subtitle')}
+                description={useText('education.bachelor.description')}
             />
             <TimelineItem
-                date={getText('education.master.date')}
-                title={getText('education.master.title')}
-                subtitle={getText('education.master.subtitle')}
-                description={getText('education.master.description')}
+                date={useText('education.master.date')}
+                title={useText('education.master.title')}
+                subtitle={useText('education.master.subtitle')}
+                description={useText('education.master.description')}
             />
 
-            <MainTitle>{getText('experience.title')}</MainTitle>
+            <MainTitle>{useText('experience.title')}</MainTitle>
             <TimelineItem
-                date={getText('experience.kstu.date')}
-                title={getText('experience.kstu.title')}
-                subtitle={getText('experience.kstu.subtitle')}
-                description={getText('experience.kstu.description')}
+                date={useText('experience.kstu.date')}
+                title={useText('experience.kstu.title')}
+                subtitle={useText('experience.kstu.subtitle')}
+                description={useText('experience.kstu.description')}
                 logo={KSTULogoImg}
             />
             <TimelineItem
-                date={getText('experience.beeline.date')}
-                title={getText('experience.beeline.title')}
-                subtitle={getText('experience.beeline.subtitle')}
-                description={getText('experience.beeline.description')}
+                date={useText('experience.beeline.date')}
+                title={useText('experience.beeline.title')}
+                subtitle={useText('experience.beeline.subtitle')}
+                description={useText('experience.beeline.description')}
                 logo={beelineLogoImg}
             />
             <TimelineItem
-                date={getText('experience.mbank.date')}
-                title={getText('experience.mbank.title')}
-                subtitle={getText('experience.mbank.subtitle')}
-                description={getText('experience.mbank.description')}
+                date={useText('experience.mbank.date')}
+                title={useText('experience.mbank.title')}
+                subtitle={useText('experience.mbank.subtitle')}
+                description={useText('experience.mbank.description')}
                 logo={mbankLogoImg}
                 logoWidth={40}
             />
 
-            <MainTitle>{getText('refresherCourses.title')}</MainTitle>
+            <MainTitle>{useText('refresherCourses.title')}</MainTitle>
             <TimelineItem
-                date={getText('refresherCourses.projectManagement.date')}
-                title={getText('refresherCourses.projectManagement.title')}
-                subtitle={getText('refresherCourses.projectManagement.subtitle')}
-                description={getText('refresherCourses.projectManagement.description')}
+                date={useText('refresherCourses.projectManagement.date')}
+                title={useText('refresherCourses.projectManagement.title')}
+                subtitle={useText('refresherCourses.projectManagement.subtitle')}
+                description={useText('refresherCourses.projectManagement.description')}
             />
             <TimelineItem
-                date={getText('refresherCourses.computerNetwork.date')}
-                title={getText('refresherCourses.computerNetwork.title')}
-                subtitle={getText('refresherCourses.computerNetwork.subtitle')}
-                description={getText('refresherCourses.computerNetwork.description')}
+                date={useText('refresherCourses.computerNetwork.date')}
+                title={useText('refresherCourses.computerNetwork.title')}
+                subtitle={useText('refresherCourses.computerNetwork.subtitle')}
+                description={useText('refresherCourses.computerNetwork.description')}
             />
         </Grid>
     );

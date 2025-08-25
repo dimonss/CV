@@ -6,7 +6,7 @@ import Section from './reusable/Section';
 import Award from './reusable/Award';
 import SocialLink from './reusable/SocialLink';
 import socialLinks from '../constants/socialLinks';
-import { getText } from '../constants/locales';
+import { useText } from '../constants/locales';
 
 const Item = styled('div')(({theme}) => {
     return {
@@ -65,57 +65,57 @@ const Sidebar: React.FC = () => {
                 <img style={styles.photo} src={photo} alt="my_photo" />
             </Grid>
             <Grid mb={1} sx={styles.name}>
-                {getText('personal.name')}
+                {useText('personal.name')}
             </Grid>
             <Grid mb={3} sx={styles.title}>
-                {getText('personal.title')}
+                {useText('personal.title')}
             </Grid>
-            <Item>{getText('personal.birthDate')}</Item>
-            <Item><a className="blue" href={`tel:${getText('personal.phone1')}`}>{getText('personal.phone1')}</a></Item>
-            <Item><a className="blue" href={`tel:${getText('personal.phone2')}`}>{getText('personal.phone2')}</a></Item>
-            <Item>{getText('personal.email')}</Item>
-            <Item>{getText('personal.location')}</Item>
+            <Item>{useText('personal.birthDate')}</Item>
+            <Item><a className="blue" href={`tel:${useText('personal.phone1')}`}>{useText('personal.phone1')}</a></Item>
+            <Item><a className="blue" href={`tel:${useText('personal.phone2')}`}>{useText('personal.phone2')}</a></Item>
+            <Item>{useText('personal.email')}</Item>
+            <Item>{useText('personal.location')}</Item>
             <Grid sx={styles.content} mt="12px">
-                <Section title={getText('skills.title')}>
+                <Section title={useText('skills.title')}>
                     <ul>
-                        <li>{getText('skills.skill1')}</li>
-                        <li>{getText('skills.skill2')}</li>
-                        <li>{getText('skills.skill3')}</li>
+                        <li>{useText('skills.skill1')}</li>
+                        <li>{useText('skills.skill2')}</li>
+                        <li>{useText('skills.skill3')}</li>
                     </ul>
                 </Section>
 
-                <Section title={getText('personalQualities.title')}>
+                <Section title={useText('personalQualities.title')}>
                     <ul>
-                        <li>{getText('personalQualities.quality1')}</li>
-                        <li>{getText('personalQualities.quality2')}</li>
-                        <li>{getText('personalQualities.quality3')}</li>
-                        <li>{getText('personalQualities.quality4')}</li>
+                        <li>{useText('personalQualities.quality1')}</li>
+                        <li>{useText('personalQualities.quality2')}</li>
+                        <li>{useText('personalQualities.quality3')}</li>
+                        <li>{useText('personalQualities.quality4')}</li>
                     </ul>
                 </Section>
 
-                <Section title={getText('honorAwards.title')}>
+                <Section title={useText('honorAwards.title')}>
                     <Award
-                        title={getText('honorAwards.bestTalk.title')}
-                        year={getText('honorAwards.bestTalk.year')}
-                        description={getText('honorAwards.bestTalk.description')}
+                        title={useText('honorAwards.bestTalk.title')}
+                        year={useText('honorAwards.bestTalk.year')}
+                        description={useText('honorAwards.bestTalk.description')}
                     />
                     <Award
-                        title={getText('honorAwards.letterOfThanks.title')}
-                        year={getText('honorAwards.letterOfThanks.year')}
-                        description={getText('honorAwards.letterOfThanks.description')}
+                        title={useText('honorAwards.letterOfThanks.title')}
+                        year={useText('honorAwards.letterOfThanks.year')}
+                        description={useText('honorAwards.letterOfThanks.description')}
                     />
                 </Section>
 
-                <Section title={getText('hobbies.title')}>
+                <Section title={useText('hobbies.title')}>
                     <ul>
-                        <li>{getText('hobbies.hobby1')}</li>
-                        <li>{getText('hobbies.hobby2')}</li>
-                        <li>{getText('hobbies.hobby3')}</li>
-                        <li>{getText('hobbies.hobby4')}</li>
+                        <li>{useText('hobbies.hobby1')}</li>
+                        <li>{useText('hobbies.hobby2')}</li>
+                        <li>{useText('hobbies.hobby3')}</li>
+                        <li>{useText('hobbies.hobby4')}</li>
                     </ul>
                 </Section>
 
-                <Section title={getText('links.title')}>
+                <Section title={useText('links.title')}>
                     <ul className="vcard-details">
                         {socialLinks.map((link, index) => (
                             <SocialLink key={index} {...link} />
