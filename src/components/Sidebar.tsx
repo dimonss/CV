@@ -5,7 +5,8 @@ import photo from '../images/I.jpg';
 import Section from './reusable/Section';
 import Award from './reusable/Award';
 import SocialLink from './reusable/SocialLink';
-import socialLinks from '../constants/socialLinks'
+import socialLinks from '../constants/socialLinks';
+import { getText } from '../constants/locales';
 
 const Item = styled('div')(({theme}) => {
     return {
@@ -64,57 +65,57 @@ const Sidebar: React.FC = () => {
                 <img style={styles.photo} src={photo} alt="my_photo" />
             </Grid>
             <Grid mb={1} sx={styles.name}>
-                Chalysh Dmitrii
+                {getText('personal.name')}
             </Grid>
             <Grid mb={3} sx={styles.title}>
-                Frontend Developer
+                {getText('personal.title')}
             </Grid>
-            <Item>Bishkek, August 20, 1996</Item>
-            <Item><a className="blue" href="tel:+996 225 55 35 11">+996 225 55 35 11</a></Item>
-            <Item><a className="blue" href="tel:+996 705 55 35 11">+996 705 55 35 11</a></Item>
-            <Item>faimos69@gmail.com</Item>
-            <Item>Kyrgyzstan, Bishkek</Item>
+            <Item>{getText('personal.birthDate')}</Item>
+            <Item><a className="blue" href={`tel:${getText('personal.phone1')}`}>{getText('personal.phone1')}</a></Item>
+            <Item><a className="blue" href={`tel:${getText('personal.phone2')}`}>{getText('personal.phone2')}</a></Item>
+            <Item>{getText('personal.email')}</Item>
+            <Item>{getText('personal.location')}</Item>
             <Grid sx={styles.content} mt="12px">
-                <Section title="Skills">
+                <Section title={getText('skills.title')}>
                     <ul>
-                        <li>JS, HTML, CSS, Sass, Chrome DevTools, Git, Express.js, NGINX, SQL, Jest, Cypress</li>
-                        <li>Scripting language: JavaScript, TypeScript, Python.</li>
-                        <li>Framework/Library: React/Redux, MUI, Django etc.</li>
+                        <li>{getText('skills.skill1')}</li>
+                        <li>{getText('skills.skill2')}</li>
+                        <li>{getText('skills.skill3')}</li>
                     </ul>
                 </Section>
 
-                <Section title="Personal qualities">
+                <Section title={getText('personalQualities.title')}>
                     <ul>
-                        <li>Pedantry</li>
-                        <li>Perseverance</li>
-                        <li>Mindfulness</li>
-                        <li>Sociability</li>
+                        <li>{getText('personalQualities.quality1')}</li>
+                        <li>{getText('personalQualities.quality2')}</li>
+                        <li>{getText('personalQualities.quality3')}</li>
+                        <li>{getText('personalQualities.quality4')}</li>
                     </ul>
                 </Section>
 
-                <Section title="Honor & award">
+                <Section title={getText('honorAwards.title')}>
                     <Award
-                        title="The best talk"
-                        year="2020"
-                        description="The 62nd International Network Scientific and Technical Conference 'Наука, техника и инженерное образование в цифровую эпоху: идеи и решения'"
+                        title={getText('honorAwards.bestTalk.title')}
+                        year={getText('honorAwards.bestTalk.year')}
+                        description={getText('honorAwards.bestTalk.description')}
                     />
                     <Award
-                        title="Letter of thanks"
-                        year="2021"
-                        description="For professional implementation of partner integrations at Balance.kg, as well as responsible involvement in company processes beyond regular duties."
+                        title={getText('honorAwards.letterOfThanks.title')}
+                        year={getText('honorAwards.letterOfThanks.year')}
+                        description={getText('honorAwards.letterOfThanks.description')}
                     />
                 </Section>
 
-                <Section title="Hobbies & Interest">
+                <Section title={getText('hobbies.title')}>
                     <ul>
-                        <li>Tech Meetups and Conferences</li>
-                        <li>Design and Creativity</li>
-                        <li>Fitness and Outdoor Activities</li>
-                        <li>Music and Creative Arts</li>
+                        <li>{getText('hobbies.hobby1')}</li>
+                        <li>{getText('hobbies.hobby2')}</li>
+                        <li>{getText('hobbies.hobby3')}</li>
+                        <li>{getText('hobbies.hobby4')}</li>
                     </ul>
                 </Section>
 
-                <Section title="Links & Credentials">
+                <Section title={getText('links.title')}>
                     <ul className="vcard-details">
                         {socialLinks.map((link, index) => (
                             <SocialLink key={index} {...link} />
