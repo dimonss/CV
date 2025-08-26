@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button, ButtonGroup } from '@mui/material';
 import { useLocaleStore } from '../constants/locales';
+import useIsMobile from '../hooks/useIsMobile';
 
 const LanguageSwitcher: React.FC = () => {
   const { currentLocale, setLocale } = useLocaleStore();
+  const isMobile = useIsMobile();
 
   const handleLanguageChange = (locale: 'en' | 'ru') => {
     setLocale(locale);
@@ -19,13 +21,13 @@ const LanguageSwitcher: React.FC = () => {
         right: '20px', 
         zIndex: 1000,
         '& .MuiButton-root': {
-          borderColor: '#233a5f',
+          borderColor: isMobile ? '#fff' : '#233a5f',
           color: '#233a5f',
           backgroundColor: 'white',
           '&:hover': {
             backgroundColor: '#233a5f',
             color: '#fff',
-            borderColor: '#233a5f'
+            borderColor: isMobile ? '#fff' : '#233a5f',
           }
         }
       }}
@@ -47,7 +49,7 @@ const LanguageSwitcher: React.FC = () => {
         onClick={() => handleLanguageChange('ru')}
         sx={{
           backgroundColor: currentLocale === 'ru' ? '#233a5f' : 'white',
-          color: currentLocale === 'ru' ? '#fff' : '#233a5f',
+          color: currentLocale === 'ru' ? '#233a5f' : '#fff',
           '&:hover': {
             backgroundColor: currentLocale === 'ru' ? '#1a2027' : '#233a5f',
             color: '#fff'
