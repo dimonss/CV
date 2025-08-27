@@ -50,5 +50,8 @@
       "node_modules/@types",
       "src/types"
     ]
+  },
+  "devDependencies": {
+    "prettier": "3.6.2"
   }
 }
