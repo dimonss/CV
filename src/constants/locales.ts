@@ -13,7 +13,7 @@ interface LocaleStore {
 const detectUserLanguage = (): Locale => {
   const userLang = navigator.language || navigator.languages?.[0] || 'en';
   const shortLang = userLang.split('-')[0].toLowerCase();
-  
+
   if (shortLang === 'ru') {
     return 'ru';
   }
@@ -55,17 +55,19 @@ export const locales = {
     // Skills Section
     skills: {
       title: "Skills",
-      skill1: "JS, HTML, CSS, Sass, Chrome DevTools, Git, Express.js, NGINX, SQL, Jest, Cypress",
-      skill2: "Scripting language: JavaScript, TypeScript, Python.",
-      skill3: "Framework/Library: React/Redux, MUI, Django etc."
+      core: "JavaScript, TypeScript, React, Redux, MobX, HTML5, CSS3, Sass",
+      architecture: "Micro-frontends, Module Federation, Component Architecture",
+      tools: "Git, Webpack, Vite, Chrome DevTools, Jest, Cypress, Docker, CI/CD, NGINX, Linux Administration",
+      backend: "Express.js, SQL, Python, Django",
+      uiLibraries: "MUI, Ant Design, Custom Component Libraries"
     },
 
     // Personal Qualities
     personalQualities: {
       title: "Personal qualities",
-      quality1: "Pedantry",
+      quality1: "Attention to detail",
       quality2: "Perseverance",
-      quality3: "Mindfulness",
+      quality3: "Quality-oriented",
       quality4: "Sociability"
     },
 
@@ -101,7 +103,7 @@ export const locales = {
     // About Section
     about: {
       title: "About",
-      description: "Passionate and dedicated web developer with three years of hands-on experience in designing and implementing cutting-edge web applications and websites. With a strong foundation in front-end development technologies, I thrive in dynamic and collaborative environments where creativity and innovation are valued. My commitment to staying updated with the latest industry trends and technologies allows me to deliver high-quality solutions that meet both client needs and business objectives. Known for my problem-solving skills, attention to detail, I am eager to leverage my expertise to contribute to the success of innovative projects and drive business growth."
+      description: "Lead Frontend Developer with 5+ years of experience in Fintech and Telecom. Specialized in building scalable web applications, leading development teams, and architecting modern frontend solutions. Proven track record in transformation projects, implementing testing culture, and optimizing CI/CD processes. Experienced in full-stack development with DevOps expertise."
     },
 
     // Education Section
@@ -140,7 +142,7 @@ export const locales = {
         date: "Jun 2024 - Present",
         title: "MBANK",
         subtitle: "Lead Frontend developer",
-        description: "Recently stepped into the Lead Frontend Developer role, managing a team of 5. My responsibilities include guiding the team, overseeing architecture using React and MobX, ensuring performance optimization, and delivering responsive designs. I collaborate closely with designers and backend teams to meet business goals."
+        description: "Lead frontend development for MBusiness, a key B2B banking product, managing a team of 5 developers. Led the migration/refactoring of legacy modules to a modern stack (React + MobX), achieving zero critical stoppers during active product scaling. Implemented a testing culture using Jest/Cypress, covering core business logic with tests to ensure 99.9% stability. Optimized CI/CD processes and performance, significantly reducing time-to-market for new features. Developed custom component libraries to standardize UI elements and speed up development across teams. Oversee frontend architecture, performance optimization, and collaborate closely with designers and backend teams to meet business goals."
       }
     },
 
@@ -151,13 +153,13 @@ export const locales = {
         date: "2018",
         title: "Certificate",
         subtitle: "Software project management",
-        description: "In the Project Management courses, we studied the methods and tools necessary for successful management of the software development lifecycle. We explored various project management methodologies such as Agile, Waterfall, Scrum, and Kanban, and learned how to choose the approach most suitable for a specific project. Additionally, we delved into project planning, tracking, and control processes, as well as risk and resource management. Throughout the courses, we engaged in practical exercises including creating project plans, estimating time and resources, and managing teams and communication with stakeholders."
+        description: "Project management methodologies: Agile, Waterfall, Scrum, Kanban."
       },
       computerNetwork: {
         date: "2019",
         title: "Certificate",
         subtitle: "Computer network",
-        description: "In the computer networking courses, we studied the fundamentals of network technologies, including data transmission protocols, network architecture, configuration, and management of network equipment. We also learned about routing principles, data routing and switching, as well as network security. During the courses, we conducted practical sessions, configuring and troubleshooting network equipment, as well as solving tasks related to network diagnostics and fault correction"
+        description: "Network technologies, protocols, configuration, and security."
       }
     }
   },
@@ -178,17 +180,19 @@ export const locales = {
     // Skills Section
     skills: {
       title: "Навыки",
-      skill1: "JS, HTML, CSS, Sass, Chrome DevTools, Git, Express.js, NGINX, SQL, Jest, Cypress",
-      skill2: "Языки программирования: JavaScript, TypeScript, Python.",
-      skill3: "Фреймворки/Библиотеки: React/Redux, MUI, Django и др."
+      core: "JavaScript, TypeScript, React, Redux, MobX, HTML5, CSS3, Sass",
+      architecture: "Микрофронтенды, Module Federation, Компонентная архитектура",
+      tools: "Git, Webpack, Vite, Chrome DevTools, Jest, Cypress, Docker, CI/CD, NGINX, Linux Administration",
+      backend: "Express.js, SQL, Python, Django",
+      uiLibraries: "MUI, Ant Design, Пользовательские компонентные библиотеки"
     },
 
     // Personal Qualities
     personalQualities: {
       title: "Личные качества",
-      quality1: "Педантичность",
+      quality1: "Внимание к деталям",
       quality2: "Настойчивость",
-      quality3: "Внимательность",
+      quality3: "Ориентация на качество",
       quality4: "Общительность"
     },
 
@@ -224,7 +228,7 @@ export const locales = {
     // About Section
     about: {
       title: "О себе",
-      description: "Увлеченный и преданный веб-разработчик с трехлетним практическим опытом проектирования и реализации современных веб-приложений и веб-сайтов. Имея прочную основу в технологиях фронтенд-разработки, я преуспеваю в динамичной и совместной среде, где ценятся творчество и инновации. Моя приверженность постоянному обновлению последних отраслевых тенденций и технологий позволяет мне предоставлять высококачественные решения, которые соответствуют как потребностям клиентов, так и бизнес-целям. Известный своими навыками решения проблем и вниманием к деталям, я стремлюсь использовать свой опыт для содействия успеху инновационных проектов и стимулирования роста бизнеса."
+      description: "Ведущий Frontend разработчик с опытом работы 5+ лет в Финтехе и Телекоме. Специализируюсь на разработке масштабируемых веб-приложений, руководстве командами разработки и проектировании современных frontend решений. Доказанный опыт в проектах трансформации, внедрении культуры тестирования и оптимизации CI/CD процессов. Имею опыт full-stack разработки с экспертизой в DevOps."
     },
 
     // Education Section
@@ -263,7 +267,7 @@ export const locales = {
         date: "Июн 2024 - Настоящее время",
         title: "МБАНК",
         subtitle: "Ведущий Frontend разработчик",
-        description: "Недавно занял должность ведущего Frontend разработчика, управляя командой из 5 человек. Мои обязанности включают руководство командой, контроль архитектуры с использованием React и MobX, обеспечение оптимизации производительности и доставку адаптивных дизайнов. Я тесно сотрудничаю с дизайнерами и backend командами для достижения бизнес-целей."
+        description: "Руковожу frontend разработкой MBusiness, ключевого B2B банковского продукта, управляя командой из 5 разработчиков. Провел миграцию/рефакторинг legacy модулей на современный стек (React + MobX), достигнув нулевого количества критических стопперов в процессе активного масштабирования продукта. Внедрил культуру тестирования с использованием Jest/Cypress, покрыв тестами основную бизнес-логику для обеспечения стабильности 99.9%. Оптимизировал CI/CD процессы и производительность, значительно сократив время вывода новых функций на рынок. Разработал пользовательские компонентные библиотеки для стандартизации UI элементов и ускорения разработки в командах. Контролирую frontend архитектуру, оптимизацию производительности и тесно сотрудничаю с дизайнерами и backend командами для достижения бизнес-целей."
       }
     },
 
@@ -274,13 +278,13 @@ export const locales = {
         date: "2018",
         title: "Сертификат",
         subtitle: "Управление программными проектами",
-        description: "На курсах по управлению проектами мы изучали методы и инструменты, необходимые для успешного управления жизненным циклом разработки программного обеспечения. Мы изучили различные методологии управления проектами, такие как Agile, Waterfall, Scrum и Kanban, и научились выбирать подход, наиболее подходящий для конкретного проекта. Кроме того, мы углубились в процессы планирования, отслеживания и контроля проектов, а также управления рисками и ресурсами. На протяжении курсов мы участвовали в практических упражнениях, включая создание планов проектов, оценку времени и ресурсов, а также управление командами и коммуникацию с заинтересованными сторонами."
+        description: "Методологии управления проектами: Agile, Waterfall, Scrum, Kanban."
       },
       computerNetwork: {
         date: "2019",
         title: "Сертификат",
         subtitle: "Компьютерные сети",
-        description: "На курсах по компьютерным сетям мы изучали основы сетевых технологий, включая протоколы передачи данных, архитектуру сети, конфигурацию и управление сетевым оборудованием. Мы также изучали принципы маршрутизации, маршрутизацию и коммутацию данных, а также безопасность сети. Во время курсов мы проводили практические занятия, конфигурируя и устраняя неполадки сетевого оборудования, а также решая задачи, связанные с диагностикой сети и исправлением неисправностей."
+        description: "Сетевые технологии, протоколы, конфигурация и безопасность."
       }
     }
   }
@@ -291,7 +295,7 @@ export const useText = (key: string): string => {
   const { currentLocale } = useLocaleStore();
   const keys = key.split('.');
   let value: any = locales[currentLocale as keyof typeof locales];
-  
+
   for (const k of keys) {
     if (value && typeof value === 'object' && k in value) {
       value = value[k];
@@ -300,7 +304,7 @@ export const useText = (key: string): string => {
       return key;
     }
   }
-  
+
   return value;
 };
 
@@ -309,7 +313,7 @@ export const getText = (key: string): string => {
   const { currentLocale } = useLocaleStore.getState();
   const keys = key.split('.');
   let value: any = locales[currentLocale as keyof typeof locales];
-  
+
   for (const k of keys) {
     if (value && typeof value === 'object' && k in value) {
       value = value[k];
@@ -318,6 +322,6 @@ export const getText = (key: string): string => {
       return key;
     }
   }
-  
+
   return value;
 };

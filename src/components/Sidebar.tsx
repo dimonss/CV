@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
-import {experimentalStyled as styled} from "@mui/material/styles";
+import { experimentalStyled as styled } from "@mui/material/styles";
 import photo from '../images/I.jpg';
 import Section from './reusable/Section';
 import Award from './reusable/Award';
@@ -8,7 +8,7 @@ import SocialLink from './reusable/SocialLink';
 import socialLinks from '../constants/socialLinks';
 import { useText } from '../constants/locales';
 
-const Item = styled('div')(({theme}) => {
+const Item = styled('div')(({ theme }) => {
     return {
         backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
         ...theme.typography.body2,
@@ -78,9 +78,11 @@ const Sidebar: React.FC = () => {
             <Grid sx={styles.content} mt="12px">
                 <Section title={useText('skills.title')}>
                     <ul>
-                        <li>{useText('skills.skill1')}</li>
-                        <li>{useText('skills.skill2')}</li>
-                        <li>{useText('skills.skill3')}</li>
+                        <li><strong>Core:</strong> {useText('skills.core')}</li>
+                        <li><strong>Architecture:</strong> {useText('skills.architecture')}</li>
+                        <li><strong>Tools:</strong> {useText('skills.tools')}</li>
+                        <li><strong>Backend:</strong> {useText('skills.backend')}</li>
+                        <li><strong>UI Libraries:</strong> {useText('skills.uiLibraries')}</li>
                     </ul>
                 </Section>
 
