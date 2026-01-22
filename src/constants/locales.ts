@@ -100,6 +100,11 @@ export const locales = {
       title: "Links & Credentials"
     },
 
+    // Download
+    download: {
+      tooltip: "Download PDF"
+    },
+
     // About Section
     about: {
       title: "About",
@@ -223,6 +228,11 @@ export const locales = {
     // Links & Credentials
     links: {
       title: "Ссылки и учетные данные"
+    },
+
+    // Download
+    download: {
+      tooltip: "Скачать PDF"
     },
 
     // About Section

@@ -13,6 +13,7 @@ const LanguageSwitcher: React.FC = () => {
 
   return (
     <ButtonGroup
+      className='language-switcher'
       variant='outlined'
       size='small'
       sx={{
