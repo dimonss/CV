@@ -26,35 +26,7 @@ const Content: React.FC = () => {
                 {useText('about.description')}<br/><br/>
             </MainText>
 
-            <MainTitle>{useText('education.title')}</MainTitle>
-            <TimelineItem
-                date={useText('education.bachelor.date')}
-                title={useText('education.bachelor.title')}
-                subtitle={useText('education.bachelor.subtitle')}
-                description={useText('education.bachelor.description')}
-            />
-            <TimelineItem
-                date={useText('education.master.date')}
-                title={useText('education.master.title')}
-                subtitle={useText('education.master.subtitle')}
-                description={useText('education.master.description')}
-            />
-
             <MainTitle>{useText('experience.title')}</MainTitle>
-            <TimelineItem
-                date={useText('experience.kstu.date')}
-                title={useText('experience.kstu.title')}
-                subtitle={useText('experience.kstu.subtitle')}
-                description={useText('experience.kstu.description')}
-                logo={KSTULogoImg}
-            />
-            <TimelineItem
-                date={useText('experience.beeline.date')}
-                title={useText('experience.beeline.title')}
-                subtitle={useText('experience.beeline.subtitle')}
-                description={useText('experience.beeline.description')}
-                logo={beelineLogoImg}
-            />
             <TimelineItem
                 date={useText('experience.mbank.date')}
                 title={useText('experience.mbank.title')}
@@ -64,18 +36,47 @@ const Content: React.FC = () => {
                 logoWidth={40}
             />
 
-            <MainTitle>{useText('refresherCourses.title')}</MainTitle>
             <TimelineItem
-                date={useText('refresherCourses.projectManagement.date')}
-                title={useText('refresherCourses.projectManagement.title')}
-                subtitle={useText('refresherCourses.projectManagement.subtitle')}
-                description={useText('refresherCourses.projectManagement.description')}
+                date={useText('experience.beeline.date')}
+                title={useText('experience.beeline.title')}
+                subtitle={useText('experience.beeline.subtitle')}
+                description={useText('experience.beeline.description')}
+                logo={beelineLogoImg}
             />
+            <TimelineItem
+                date={useText('experience.kstu.date')}
+                title={useText('experience.kstu.title')}
+                subtitle={useText('experience.kstu.subtitle')}
+                description={useText('experience.kstu.description')}
+                logo={KSTULogoImg}
+            />
+
+            <MainTitle>{useText('education.title')}</MainTitle>
+            <TimelineItem
+                date={useText('education.master.date')}
+                title={useText('education.master.title')}
+                subtitle={useText('education.master.subtitle')}
+                description={useText('education.master.description')}
+            />
+            <TimelineItem
+                date={useText('education.bachelor.date')}
+                title={useText('education.bachelor.title')}
+                subtitle={useText('education.bachelor.subtitle')}
+                description={useText('education.bachelor.description')}
+            />
+
+            <MainTitle>{useText('refresherCourses.title')}</MainTitle>
             <TimelineItem
                 date={useText('refresherCourses.computerNetwork.date')}
                 title={useText('refresherCourses.computerNetwork.title')}
                 subtitle={useText('refresherCourses.computerNetwork.subtitle')}
                 description={useText('refresherCourses.computerNetwork.description')}
+            />
+            <TimelineItem
+                date={useText('refresherCourses.projectManagement.date')}
+                title={useText('refresherCourses.projectManagement.title')}
+                subtitle={useText('refresherCourses.projectManagement.subtitle')}
+                description={useText('refresherCourses.projectManagement.description')}
             />
         </Grid>
     );

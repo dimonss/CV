@@ -97,14 +97,14 @@ const Sidebar: React.FC = () => {
 
                 <Section title={useText('honorAwards.title')}>
                     <Award
-                        title={useText('honorAwards.bestTalk.title')}
-                        year={useText('honorAwards.bestTalk.year')}
-                        description={useText('honorAwards.bestTalk.description')}
-                    />
-                    <Award
                         title={useText('honorAwards.letterOfThanks.title')}
                         year={useText('honorAwards.letterOfThanks.year')}
                         description={useText('honorAwards.letterOfThanks.description')}
+                    />
+                    <Award
+                        title={useText('honorAwards.bestTalk.title')}
+                        year={useText('honorAwards.bestTalk.year')}
+                        description={useText('honorAwards.bestTalk.description')}
                     />
                 </Section>
 
