@@ -1,16 +1,34 @@
-import React, { useState } from 'react';
-import { IconButton, CircularProgress, Tooltip } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Button, CircularProgress, Tooltip, Box, keyframes } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
 import html2pdf from 'html2pdf.js';
 import useIsMobile from '../hooks/useIsMobile';
 import { useLocaleStore, useText } from '../constants/locales';
 
+const bounceArrow = keyframes`
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+`;
+
 const DownloadButton: React.FC = () => {
     const [isLoading, setIsLoading] = useState(false);
+    const [showArrow, setShowArrow] = useState(false);
     const isMobile = useIsMobile();
     const { currentLocale } = useLocaleStore();
     const downloadText = useText('download.tooltip');
+    const buttonText = useText('download.button');
     const name = useText('personal.name');
+
+    useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('showDownloadButton')) {
+            setShowArrow(true);
+        }
+    }, []);
 
     const handleDownload = async () => {
         setIsLoading(true);
@@ -68,41 +86,77 @@ const DownloadButton: React.FC = () => {
         }
     };
 
+    const handleButtonClick = () => {
+        setShowArrow(false);
+        handleDownload();
+    };
+
+    const handleArrowClick = () => {
+        setShowArrow(false);
+    };
+
     return (
-        <Tooltip title={downloadText} placement="left">
-            <IconButton
-                onClick={handleDownload}
-                disabled={isLoading}
-                sx={{
-                    position: 'fixed',
-                    top: '20px',
-                    right: '110px',
-                    backgroundColor: 'white',
-                    boxShadow: isMobile ? '3px 3px 10px #333' : '0 2px 8px rgba(0,0,0,0.15)',
-                    border: isMobile ? '1px solid #fff' : '1px solid #233a5f',
-                    color: '#233a5f',
-                    width: '30px',
-                    height: '30px',
-                    '&:hover': {
-                        backgroundColor: '#233a5f',
-                        color: '#fff',
-                    },
-                    '&:disabled': {
+        <>
+            {showArrow && (
+                <Box
+                    onClick={handleArrowClick}
+                    sx={{
+                        position: 'fixed',
+                        top: '8px',
+                        right: '250px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        cursor: 'pointer',
+                        zIndex: 1000,
+                        animation: `${bounceArrow} 0.8s ease-in-out infinite`,
+                    }}
+                >
+                    <Box
+                        component="span"
+                        sx={{
+                            fontSize: '48px',
+                            color: '#233a5f',
+                            fontWeight: 'bold',
+                            textShadow: '0 3px 6px rgba(0,0,0,0.3)',
+                        }}
+                    >
+                        →
+                    </Box>
+                </Box>
+            )}
+            <Tooltip title={downloadText} placement="bottom">
+                <Button
+                    onClick={handleButtonClick}
+                    disabled={isLoading}
+                    variant="contained"
+                    startIcon={isLoading ? <CircularProgress size={26} color="inherit" /> : <DownloadIcon />}
+                    sx={{
+                        position: 'fixed',
+                        top: '20px',
+                        right: '110px',
                         backgroundColor: 'white',
+                        boxShadow: isMobile ? '3px 3px 10px #333' : '0 2px 8px rgba(0,0,0,0.15)',
+                        border: isMobile ? '1px solid #fff' : '1px solid #233a5f',
                         color: '#233a5f',
-                    },
-                    '& svg': {
-                        margin: '0 auto',
-                    },
-                }}
-            >
-                {isLoading ? (
-                    <CircularProgress size={20} color="inherit" />
-                ) : (
-                    <DownloadIcon/>
-                )}
-            </IconButton>
-        </Tooltip>
+                        height: '32px',
+                        padding: '6px 16px',
+                        fontSize: '13px',
+                        fontWeight: 500,
+                        textTransform: 'none',
+                        '&:hover': {
+                            backgroundColor: '#233a5f',
+                            color: '#fff',
+                        },
+                        '&:disabled': {
+                            backgroundColor: 'white',
+                            color: '#233a5f',
+                        },
+                    }}
+                >
+                    {buttonText}
+                </Button>
+            </Tooltip>
+        </>
     );
 };
 

@@ -102,7 +102,8 @@ export const locales = {
 
     // Download
     download: {
-      tooltip: "Download PDF"
+      tooltip: "Download PDF",
+      button: "Download"
     },
 
     // About Section
@@ -232,7 +233,8 @@ export const locales = {
 
     // Download
     download: {
-      tooltip: "Скачать PDF"
+      tooltip: "Скачать PDF",
+      button: "Скачать"
     },
 
     // About Section
