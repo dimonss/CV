@@ -77,13 +77,13 @@ const DownloadButton: React.FC = () => {
                 sx={{
                     position: 'fixed',
                     top: '20px',
-                    right: '100px',
+                    right: '110px',
                     backgroundColor: 'white',
                     boxShadow: isMobile ? '3px 3px 10px #333' : '0 2px 8px rgba(0,0,0,0.15)',
                     border: isMobile ? '1px solid #fff' : '1px solid #233a5f',
                     color: '#233a5f',
-                    width: '40px',
-                    height: '40px',
+                    width: '30px',
+                    height: '30px',
                     '&:hover': {
                         backgroundColor: '#233a5f',
                         color: '#fff',
@@ -92,12 +92,15 @@ const DownloadButton: React.FC = () => {
                         backgroundColor: 'white',
                         color: '#233a5f',
                     },
+                    '& svg': {
+                        margin: '0 auto',
+                    },
                 }}
             >
                 {isLoading ? (
                     <CircularProgress size={20} color="inherit" />
                 ) : (
-                    <DownloadIcon />
+                    <DownloadIcon/>
                 )}
             </IconButton>
         </Tooltip>
