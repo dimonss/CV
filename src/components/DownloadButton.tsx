@@ -52,9 +52,8 @@ const DownloadButton: React.FC = () => {
                 jsPDF: {
                     unit: 'mm' as const,
                     format: 'a3' as const,
-                    orientation: 'landscape' as const,
                 },
-                pagebreak: { mode: 'avoid-all' as const },
+                pagebreak: { mode: 'avoid' as const },
                 enableLinks: true,
             };
 
