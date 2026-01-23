@@ -86,13 +86,21 @@ const DownloadButton: React.FC = () => {
         }
     };
 
+    const removeQueryParam = () => {
+        const url = new URL(window.location.href);
+        url.searchParams.delete('showDownloadButton');
+        window.history.replaceState({}, '', url.toString());
+    };
+
     const handleButtonClick = () => {
         setShowArrow(false);
+        removeQueryParam();
         handleDownload();
     };
 
     const handleArrowClick = () => {
         setShowArrow(false);
+        removeQueryParam();
     };
 
     return (
