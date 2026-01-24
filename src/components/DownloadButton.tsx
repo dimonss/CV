@@ -140,7 +140,7 @@ const DownloadButton: React.FC = () => {
                     onClick={handleButtonClick}
                     disabled={isLoading}
                     variant="contained"
-                    startIcon={isLoading ? <CircularProgress size={26} color="inherit" /> : <DownloadIcon />}
+                    startIcon={isLoading ? <CircularProgress size={20} color="inherit" /> : <DownloadIcon />}
                     sx={{
                         position: 'fixed',
                         top: '20px',
@@ -161,6 +161,9 @@ const DownloadButton: React.FC = () => {
                         '&:disabled': {
                             backgroundColor: 'white',
                             color: '#233a5f',
+                        },
+                        'svg':{
+                          margin: 0,
                         },
                     }}
                 >
