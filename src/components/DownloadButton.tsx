@@ -124,6 +124,9 @@ const DownloadButton: React.FC = () => {
                         sx={{
                             fontSize: '48px',
                             color: '#233a5f',
+                            '@media (max-width: 899px)': {
+                                color: 'white',
+                            },
                             fontWeight: 'bold',
                             textShadow: '0 3px 6px rgba(0,0,0,0.3)',
                         }}
