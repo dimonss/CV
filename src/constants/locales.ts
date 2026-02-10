@@ -59,7 +59,7 @@ export const locales = {
       architecture: "Micro-frontends, Module Federation, Component Architecture",
       tools: "Git, Webpack, Vite, Chrome DevTools, Jest, Cypress, Docker, CI/CD, NGINX, Linux Administration",
       backend: "Express.js, SQL, Python, Django",
-      uiLibraries: "MUI, Ant Design"
+      uiLibraries: "MUI, Ant Design, Custom Component Libraries"
     },
 
     // Personal Qualities
@@ -148,7 +148,7 @@ export const locales = {
         date: "Jun 2024 - Present",
         title: "MBANK",
         subtitle: "Lead Frontend developer",
-        description: "Lead frontend development for MBusiness, a key B2B banking product, managing a team of 5 developers. Led the migration/refactoring of legacy modules to a modern stack (React + MobX), achieving zero critical stoppers during active product scaling. Implemented a testing culture using Jest/Cypress, covering core business logic with tests to ensure 99.9% stability. Optimized CI/CD processes and performance, significantly reducing time-to-market for new features. Oversee frontend architecture, performance optimization, and collaborate closely with designers and backend teams to meet business goals."
+        description: "Lead frontend development for MBusiness, a key B2B banking product, managing a team of 5 developers. Led the migration/refactoring of legacy modules to a modern stack (React + MobX), achieving zero critical stoppers during active product scaling. Implemented a testing culture using Jest/Cypress, covering core business logic with tests to ensure 99.9% stability. Optimized CI/CD processes and performance, significantly reducing time-to-market for new features. Developed custom component libraries to standardize UI elements and speed up development across teams. Oversee frontend architecture, performance optimization, and collaborate closely with designers and backend teams to meet business goals."
       }
     },
 
@@ -190,7 +190,7 @@ export const locales = {
       architecture: "Микрофронтенды, Module Federation, Компонентная архитектура",
       tools: "Git, Webpack, Vite, Chrome DevTools, Jest, Cypress, Docker, CI/CD, NGINX, Linux Administration",
       backend: "Express.js, SQL, Python, Django",
-      uiLibraries: "MUI, Ant Design"
+      uiLibraries: "MUI, Ant Design, Пользовательские компонентные библиотеки"
     },
 
     // Personal Qualities
@@ -279,7 +279,7 @@ export const locales = {
         date: "Июн 2024 - Настоящее время",
         title: "МБАНК",
         subtitle: "Ведущий Frontend разработчик",
-        description: "Руковожу frontend разработкой MBusiness, ключевого B2B банковского продукта, управляя командой из 5 разработчиков. Провел миграцию/рефакторинг legacy модулей на современный стек (React + MobX), достигнув нулевого количества критических стопперов в процессе активного масштабирования продукта. Внедрил культуру тестирования с использованием Jest/Cypress, покрыв тестами основную бизнес-логику для обеспечения стабильности 99.9%. Оптимизировал CI/CD процессы и производительность, значительно сократив время вывода новых функций на рынок. Контролирую frontend архитектуру, оптимизацию производительности и тесно сотрудничаю с дизайнерами и backend командами для достижения бизнес-целей."
+        description: "Руковожу frontend разработкой MBusiness, ключевого B2B банковского продукта, управляя командой из 5 разработчиков. Провел миграцию/рефакторинг legacy модулей на современный стек (React + MobX), достигнув нулевого количества критических стопперов в процессе активного масштабирования продукта. Внедрил культуру тестирования с использованием Jest/Cypress, покрыв тестами основную бизнес-логику для обеспечения стабильности 99.9%. Оптимизировал CI/CD процессы и производительность, значительно сократив время вывода новых функций на рынок. Разработал пользовательские компонентные библиотеки для стандартизации UI элементов и ускорения разработки в командах. Контролирую frontend архитектуру, оптимизацию производительности и тесно сотрудничаю с дизайнерами и backend командами для достижения бизнес-целей."
       }
     },
 
