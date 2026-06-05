@@ -1,21 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useMediaQuery } from '@mui/material';
 
 const useIsMobile = (breakpoint: number = 600): boolean => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= breakpoint);
-    };
-
-    window.addEventListener('resize', handleResize);
-    
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [breakpoint]);
-
-  return isMobile;
+  return useMediaQuery(`(max-width:${breakpoint}px)`);
 };
 
 export default useIsMobile;
