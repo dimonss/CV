@@ -302,11 +302,9 @@ export const locales = {
   }
 };
 
-// Хук для автоматического перерендеринга при смене языка
-export const useText = (key: string): string => {
-  const { currentLocale } = useLocaleStore();
+const resolveKey = (key: string, locale: keyof typeof locales): string => {
   const keys = key.split('.');
-  let value: any = locales[currentLocale as keyof typeof locales];
+  let value: any = locales[locale];
 
   for (const k of keys) {
     if (value && typeof value === 'object' && k in value) {
@@ -317,23 +315,17 @@ export const useText = (key: string): string => {
     }
   }
 
-  return value;
+  return value as string;
+};
+
+// Хук для автоматического перерендеринга при смене языка
+export const useText = (key: string): string => {
+  const { currentLocale } = useLocaleStore();
+  return resolveKey(key, currentLocale as keyof typeof locales);
 };
 
 // Функция для получения текста по ключу (для использования вне компонентов)
 export const getText = (key: string): string => {
   const { currentLocale } = useLocaleStore.getState();
-  const keys = key.split('.');
-  let value: any = locales[currentLocale as keyof typeof locales];
-
-  for (const k of keys) {
-    if (value && typeof value === 'object' && k in value) {
-      value = value[k];
-    } else {
-      console.warn(`Text key not found: ${key}`);
-      return key;
-    }
-  }
-
-  return value;
+  return resolveKey(key, currentLocale as keyof typeof locales);
 };
